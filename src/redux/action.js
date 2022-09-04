@@ -1,5 +1,6 @@
 export const ADD = "ADD_TODO";
 export const DELETE = "DELETE_TODO";
+export const MODE = "CHANGE_MODE";
 
 let id = 1;
 
