@@ -35,11 +35,11 @@ const TodoItem = ({ todo }) => {
   return (
     <Container>
       <TextColumn>
-        <div>{done ? <del>{title}</del> : <>{title}</>}</div>
-        <div>
+        <section>{done ? <s>{title}</s> : <>{title}</>}</section>
+        <section>
           <button onClick={toggleClick}>V</button>
           <button onClick={handleClick}>X</button>
-        </div>
+        </section>
       </TextColumn>
     </Container>
   );

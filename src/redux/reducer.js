@@ -18,7 +18,7 @@ export const reducer = (state = initialState, action) => {
       return {
         todos: [
           ...state.todos.map((todo) =>
-            todo.id === action.id ? { done: !todo.done } : null
+            todo.id === action.id ? { ...todo, done: !todo.done } : todo
           ),
         ],
       };
