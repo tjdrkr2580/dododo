@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { delete_todo, toggle_todo } from "../redux/action";
+import { delete_todo } from "../redux/action";
 import styled from "styled-components";
 
 export const Container = styled.section`
@@ -24,20 +24,16 @@ export const TextColumn = styled.section`
 
 const TodoItem = ({ todo }) => {
   const dispatch = useDispatch();
-  const { id, title, done } = todo;
+  const { id, title } = todo;
   const handleClick = () => {
-    console.log(id, title, done);
+    console.log(id, title);
     dispatch(delete_todo(id));
-  };
-  const toggleClick = () => {
-    dispatch(toggle_todo(id));
   };
   return (
     <Container>
       <TextColumn>
-        <section>{done ? <s>{title}</s> : <>{title}</>}</section>
+        <section>{title}</section>
         <section>
-          <button onClick={toggleClick}>V</button>
           <button onClick={handleClick}>X</button>
         </section>
       </TextColumn>
