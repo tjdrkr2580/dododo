@@ -13,9 +13,9 @@ export const Container = styled.section`
 `;
 
 const InputForm = () => {
-  const onChange = (e) => {};
   const dispatch = useDispatch();
   const [text, setText] = useState("");
+
   const handleChange = (e) => {
     setText(e.target.value);
   };

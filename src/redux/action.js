@@ -1,6 +1,6 @@
 export const ADD = "ADD_TODO";
 export const DELETE = "DELETE_TODO";
-export const MODE = "CHANGE_MODE";
+export const TOGGLE = "TOGGLE";
 
 let id = 1;
 
@@ -18,6 +18,13 @@ export const add_todo = (todo) => {
 export const delete_todo = (id) => {
   return {
     type: DELETE,
+    id,
+  };
+};
+
+export const toggle_todo = (id) => {
+  return {
+    type: TOGGLE,
     id,
   };
 };
